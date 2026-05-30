@@ -35,12 +35,12 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 # FIX: correct usage of os.getenv — first argument must be the env var name
-BOT_TOKEN    = os.getenv("BOT_TOKEN", "ENTER_YOUR_BOT_TOKEN")
+BOT_TOKEN    = os.getenv("8872778735:AAE8C1KkGrVDzxjEcJr3FXb-GcmNY0rcTIs", "8872778735:AAE8C1KkGrVDzxjEcJr3FXb-GcmNY0rcTIs")
 LOTTIES_DIR  = Path("lotties")
 LOGO_ID      = "mylogo"
 COLOR_BA     = "BA0047"
 COLOR_FF     = "FF4A52"
-ALLOWED_USER = 6911248333 #ADMIN_ID
+ALLOWED_USER = 1899208318 #ADMIN_ID
 
 DEFAULT_FONT = str(Path(__file__).parent / "Anton-Regular.ttf")
 
