@@ -368,7 +368,7 @@ def main_kb():
  
 def select_kb():
     return InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton(text="🎯 FULL (65 items)", callback_data="full"),
+        InlineKeyboardButton(text="🎯 FULL (67 items)", callback_data="full"),
     ]])
  
  
@@ -380,7 +380,7 @@ def parse_indices(text: str) -> list[int] | None:
         if not p: continue
         try:
             n = int(p)
-            if n < 1 or n > 139: return None
+            if n < 1 or n > 67: return None
             result.append(n)
         except ValueError: return None
     return sorted(set(result)) if result else None
@@ -407,7 +407,7 @@ async def cb_type(call: CallbackQuery, state: FSMContext):
 async def cb_select_full(call: CallbackQuery, state: FSMContext):
     if call.from_user.id != ALLOWED_USER: return
     await call.answer()
-    await state.update_data(selected=list(range(1, 66)))
+    await state.update_data(selected=list(range(1, 67)))
     await call.message.edit_text(f"🎨 Enter color for <b>BA0047</b>:\n<i>skip → no change</i>", parse_mode="HTML")
     await state.set_state(S.ask_ba)
  
