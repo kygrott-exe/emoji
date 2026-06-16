@@ -320,7 +320,7 @@ def main_kb():
  
 def select_kb():
     return InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton(text="🎯 FULL (65 ta)", callback_data="full"),
+        InlineKeyboardButton(text="🎯 FULL (102 ta)", callback_data="full"),
     ]])
  
  
@@ -332,7 +332,7 @@ def parse_indices(text: str) -> list[int] | None:
         if not p: continue
         try:
             n = int(p)
-            if n < 1 or n > 140: return None
+            if n < 1 or n > 102: return None
             result.append(n)
         except ValueError: return None
     return result
